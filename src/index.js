@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <h1> Hello React JS world created by Saravanan Durai</h1>
+    <h1>Hello World developed by Laxmi </h1>
   </React.StrictMode>
 );
 
