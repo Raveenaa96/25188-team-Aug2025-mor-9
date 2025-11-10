@@ -7,7 +7,16 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <h4>FSD-RJS SARAVANAN BATCH</h4>
+    <ol>
+      <li>Laxmi Roshini</li>
+      <li>Pavithra</li>
+      <li>Jesintha</li>
+      <li>Shenbagam</li>
+      <li>Prem Kumar</li>
+      <li>Marimuthu</li>
+      <li>Shreepal</li>
+    </ol>
   </React.StrictMode>
 );
 
