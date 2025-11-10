@@ -1,18 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import  HelloWorld  from './pages/react-jsx/Helloworld';
+import IlovejsxMessage from './pages/react-jsx/IlovejsxMessage';
+import Calculation from './pages/react-data-Binding/Calculation';
+import Conditon from './pages/react-conditons/Condition';
+import Looping from './pages/react-loop/Looping';
+
+
+
+
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    <h1>Hello World developed by Laxmi </h1>
-  </React.StrictMode>
+    <React.StrictMode>
+      {/* <HelloWorld />
+      <IlovejsxMessage /> */}
+      {/* <Calculation /> */}
+      {/* <Conditon /> */}
+      <Looping />
+
+    </React.StrictMode>
+   
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
