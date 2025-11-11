@@ -7,7 +7,7 @@ export default class ExampleClassComponent extends Component {
     render(){
 
         return(
-            <div>
+            <div className="base-container">
                 <h1> Hello I am class component </h1>
             </div>
         )
