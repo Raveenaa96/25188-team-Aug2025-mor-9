@@ -1,7 +1,7 @@
 import { Component } from "react";
 
 
-export default class StateManagment extends Component{
+export default class ClasscomponentStateManagement extends Component{
 
 
     constructor(){
@@ -14,7 +14,13 @@ export default class StateManagment extends Component{
                 "panjali sabatham",
                 "Silapathigaram",
                 "Sivagasinthamani"
-            ]
+            ],
+            authorDetails: {
+                dateofBirth : "04-09-1997",
+                birthPlace : "Chennai Royapet",
+                qualifaction: "Masters in novels",
+                currentStatus: "live"
+            }
         }
     }
 
@@ -43,6 +49,15 @@ export default class StateManagment extends Component{
                         }
 
                      </ol>
+                </div>
+
+                <div className="author-details">
+                    <h3> Author Details </h3>
+                    <div className="details">
+                        <p> Date of Birth : {this.state.authorDetails.dateofBirth} </p>
+                        <p> Birth Place : {this.state.authorDetails.birthPlace} </p>
+                        <p> Qualification : {this.state.authorDetails.qualifaction} </p>
+                    </div>
                 </div>
             </div>
         )
