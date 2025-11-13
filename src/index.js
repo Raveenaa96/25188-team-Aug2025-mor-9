@@ -13,7 +13,7 @@ import ButtonOnClick from "./events/ButtonOnClick";
 import InputOnChange from "./events/InputOnChange";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+root.render( feature/laxmi-learningtask/day2-react-components-events-state
   <React.StrictMode>
     <ButtonOnClick/>
     <InputOnChange/>
@@ -32,3 +32,19 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+    <React.StrictMode>
+      
+      {/* <ExampleClassComponent /> */}
+      {/* <ExampleFunctionComponent /> */}
+      {/* <ConstructorImplementation /> */}
+      {/* <ClasscomponentStateManagement /> */}
+      {/* <FunctionComponentStateMangement /> */}
+      {/* <EmployeeManagemenet /> */}
+      {/* < ButtonClickEvent/> */}
+      <InputChangeEvent />
+
+    </React.StrictMode>
+   
+);
+
+ assignment/lakshmi
