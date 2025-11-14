@@ -1,23 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import ExampleClassComponent from './pages/react-components/class_component/ExampleClassComponent';
-import ExampleFunctionComponent from './pages/react-components/function_componet/ExampleFunctionComponent';
-import ConstructorImplementation from './pages/react-components/class_component/ConstructorImplementation';
-import ClasscomponentStateManagement from './pages/react-state/cc/ClasscomponentStateManagement';
-import FunctionComponentState from './pages/react-state/fc/FunctionComponentStateMangement';
-import FunctionComponentStateMangement from './pages/react-state/fc/FunctionComponentStateMangement';
-import EmployeeManagemenet from './pages/react-state/cc/EmployeeManagement';
-import ButtonClickEvent from './pages/react-events/fc/ButtonClickEvent';
-import InputChangeEvent from './pages/react-events/fc/InputChangeEvent';
+import React from "react";
+import ConstructorImplementation from "./components/class_component/ConstructorImplementation";
+import InsituteProfile from "./components/class_component/InstituteProfile";
+import ReactDOM from "react-dom/client";
+import MovieDetails from "./state/fc/MovieDetails";
+import SchoolManagement from "./state/cc/SchoolManagement";
+import MovieCard from "./components/function_component/MovieCard";
+import FoodMenu from "./state/cc/FoodMenu";
+import Employee from "./state/cc/Employee";
+import EmployeeManagement from "./state/fc/EmployeeManagement";
+import SchoolManagementSystem from "./state/fc/SchoolManagementSystem";
+import ButtonOnClick from "./events/ButtonOnClick";
+import InputOnChange from "./events/InputOnChange";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render( feature/laxmi-learningtask/day2-react-components-events-state
+  <React.StrictMode>
+    <ButtonOnClick/>
+    <InputOnChange/>
+    <SchoolManagementSystem/>
+    <FoodMenu/>
+    <EmployeeManagement/>
+    <MovieDetails/>
+    <MovieCard />
+    <Employee/>
+    <InsituteProfile />
+    <SchoolManagement/>
+    <ConstructorImplementation/>
+  </React.StrictMode>
+);
 
-
-
-
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
     <React.StrictMode>
       
       {/* <ExampleClassComponent /> */}
@@ -33,3 +47,4 @@ root.render(
    
 );
 
+ assignment/lakshmi
