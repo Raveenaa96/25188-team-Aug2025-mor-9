@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Countercc from './pages/react-update-state/classComponent/Countercc';
-import Counterfn from './pages/react-update-state/functionCompoent/Counterfn';
-import SimpleTextupdatefn from './pages/react-update-state/functionCompoent/SimpleTextupdatefn';
-import InputChangeEvent from './pages/react-update-state/functionCompoent/InputChangeEvent';
-import InputChangeEventcc from './pages/react-update-state/classComponent/InputChangeEventcc';
-import SimpleObjectUpdatefn from './pages/react-update-state/functionCompoent/SimpleObjectUpdatefn';
-import MultipleObjectUpdatefn from './pages/react-update-state/functionCompoent/MultipleObjectUpdatefn';
-import MultipleObjectStateUpdatecc from './pages/react-update-state/classComponent/MultipleObjectStateUpdatecc';
+//import 'bootstrap/dist/css/bootstrap.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.css"
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
+
+
+
+
+
+//import HomePage from './pages/react-css/home/HomePage';
+//import AboutPage from './pages/react-css/about/AboutPage';
+// import BlogPage from './pages/react-css/blog/BlogPage';
+
+import Contact from './pages/react-module-css/contact/Contact';
+import Gallery from './pages/react-module-css/gallery/Galllery';
+import Button from './pages/react-bootstrap/button/Button.jsx';
+
 
 
 
@@ -20,19 +28,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
       
+      {/* <HomePage /> */}
+      {/* <AboutPage /> */}
+      {/* <BlogPage /> */}
+      {/* <Contact/> */}
+      {/* <Gallery /> */}
+      <Button/>
       
-      {/* <Countercc /> */}
-      {/* <InputChangeEventcc /> */}
-      {/* <MultipleObjectStateUpdatecc /> */}
-
-
-
-
-      {/* <Counterfn /> */}
-      {/* <SimpleTextupdatefn /> */}
-      {/* <InputChangeEvent /> */}
-      {/* <SimpleObjectUpdatefn /> */}
-      <MultipleObjectUpdatefn />
      
 
     </React.StrictMode>
