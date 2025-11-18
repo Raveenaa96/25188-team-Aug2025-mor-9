@@ -1,39 +1,37 @@
 import { useState } from "react";
 
-export default function FunctionComponentStateMangement() {
-  const [authorName, setAuthorName] = useState("Saravanan");
-  const [authorAge, setAuthorage] = useState(27);
-  const [authorBooks, setAuthorBooks] = useState([
-    "Ponniyen selvan",
-    "Panjali sabatham",
-    "Silapathikaram",
-    "Sivaga sinthamani"
-  ]);
+export default function FunctionComponentStateManagement()
+{
+  const [movieName,setMovieName]=useState("Leo");
+  const [releaseYear,setReleaseYear]=useState(2023);
+  const [actors,setActors]=useState([
+    "Vijay",
+    "Trisha",
+    "Gauthan Vasudev Menon",
+    "Arjun"
+  ])
 
-  return (
+  return(
     <div className="base-container">
       <div className="heading">
-        <h1> Function Component State Management </h1>
+      <h1>Moview Details</h1>
+      <h1>MovieName: {movieName}</h1>
+      <h1>ReleaseYear: {releaseYear}</h1>
       </div>
-
-      <div className="author">
-        <p> Author Name : {authorName} </p>
-        <p> Author Age : {authorAge} </p>
-      </div>
-
-      <div className="books">
-        <h5> Author books </h5>
-
-        <ol type="1">
-          {authorBooks && authorBooks.length != 0 ? (
-            authorBooks.map((value, index) => {
-              return <li> {value} </li>;
-            })
-          ) : (
-            <li> Currently No Books found</li>
-          )}
+      <div className="actors">
+        <h1>ACtors:</h1>
+        <ol>
+          {
+            actors && actors.length!==0 ?
+            actors.map((value,index)=>
+            {
+              return <li key={index}>{value}</li>
+            }):
+            <li>No actors found</li>
+          }
         </ol>
       </div>
+
     </div>
-  );
+  )
 }

@@ -1,25 +1,21 @@
-export default function ButtonClickEvent(){
+export default function ButtonClickEvent() {
+  const greet = () => {
+    alert("Hello! Have a greet Day! 😍");
+  };
 
-    const clickMe = () => {
-        alert("Button Event is Triggred")
-    }
+  const greetUser = (name) => {
+    alert("Hello " + name + ",Welcome to React!");
+  };
 
-    const welcomemsg = (candidateName) => {
-
-        alert("Welcome to React Js world " + candidateName )
-    }
-
-
-    return(
-        <div className="base-container">
-            <div className="heading">
-                <h1> Button Click Event </h1>
-            </div>
-
-            <div className="button">
-                <button onClick={clickMe}> Click me  </button>
-                <button onClick={ () => welcomemsg("saravanan") }> Welcome Message </button>
-            </div>
-        </div>
-    )
+  return (
+    <div className="base-container">
+      <div className="heading">
+        <h1>Greeting Event</h1>
+      </div>
+      <div className="button">
+        <button onClick={greet}>General Greeting</button>
+        <button onClick={() => greetUser("Jesintha")}>Personal Greeting</button>
+      </div>
+    </div>
+  );
 }

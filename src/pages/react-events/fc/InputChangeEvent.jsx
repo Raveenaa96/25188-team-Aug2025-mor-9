@@ -1,31 +1,28 @@
-export default function InputChangeEvent(){
+export default function InputChangeEvent()
+{
+    const agechange=(event)=>
+    {
+        console.log("Age entered: ",event.target.value);
+    }
 
-   const changeEvent = (event) => {
-       console.log("Event ====>",event.target.value)
-   }
-
-   const chooseFruit = (event) => {
-      alert("You choosed Fruit is = " + event.target.value)
-   }
-
-
+    const chooseHobby=(event)=>
+    {
+        alert("Your selected hobby: "+event.target.value);
+    }
     return(
         <div className="base-container">
             <div className="heading">
-                <h1> Input  Change Event </h1>
+                <h1>Age & Hobby Select Event</h1>
             </div>
-
-            <div className="input-change">
-                <input type="text" onChange = {changeEvent} />
+            <div className="change-input">
+                <input type="number" placeholder="Enter your age" onChange={agechange}/>
             </div>
-
             <div className="select-box">
-                <p> Choose Any fruits </p>
-                <select onChange = {chooseFruit}>
-                    <option>choose any Fruits</option>
-                    <option value = "apple">Apple</option>
-                    <option value = "orange">Orange</option>
-                    <option value = "pine-apple">Pineapple</option>
+                <p>Select your Hobby</p>
+                <select onChange={chooseHobby}>
+                    <option value="Reading">Reading</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Traveling">Traveling</option>
                 </select>
             </div>
         </div>
