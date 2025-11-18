@@ -1,17 +1,10 @@
-react-module-css
-=================
-   1. index.js
-      index.module.css
+React Props:
 
-   2. index file inside -> import indexStyle from './index.module.css'
-         <p className = {indexStyle.heading}> Hello world </p>
+   Prpos known as properties
+   Props is helps to communicate or data trasfer to Parent to child components.
 
-react - Boostrap
-==================
-   1. npm install bootstrap --save (or) npm i bootstrap --save
 
-   2. index.js -> 
-      import "../node_modules/bootstrap/dist/css/bootstrap.css"
-      import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
-
-   3. write to continue your bootstrap code.
+React Callbacks:
+     
+     Callbacks is an event through passing parent component props.
+     Callbacks is helps to communicate data through event via child to parent
