@@ -1,7 +1,7 @@
 import { Fragment } from "react/jsx-runtime";
 
 export default function BasicTableView({ tableheading, tableData }) {
-    console.log("tableData====>",tableData)
+   
   return (
     <div className="base-container">
       <table className="table table-border">
@@ -16,13 +16,16 @@ export default function BasicTableView({ tableheading, tableData }) {
           </tr>
         </thead>
         <tbody>
+          
              {tableData && tableData.length !=0 ?
                 tableData.map((value,index)=>{
+
+                  console.log("value======>",value.length)
                    
                      return <Fragment key={index}>
                                           <tr>
-                                              <td>{value.id}</td>
-                                              <td>{value.name}</td>
+                                              <td>{value.colum1}</td>
+                                              <td>{value.colum2}</td>
                                           </tr>
                                     </Fragment>
                 })

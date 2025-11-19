@@ -22,16 +22,16 @@ export default function DashboardMainPage() {
     },
   ]);
   const [salesReport,setSalesReport] = useState([
-    //  {
-    //     date : "11-01-2025",
-    //     sales: "12,00,000"
+     {
+        date : "11-01-2025",
+        sales: "12,00,000"
 
-    //  },
-    //  {
-    //     date: "11-08-2025",
-    //     sales: "12,00,000"
+     },
+     {
+        date: "11-08-2025",
+        sales: "12,00,000"
         
-    //  }
+     }
   ])
 
   return (
@@ -41,7 +41,10 @@ export default function DashboardMainPage() {
       </div>
 
       <div className="customer-details pt-5">
-        <CustomerDetails dashboardData={dashboardData} customers={customers} />
+        <CustomerDetails 
+          dashboardData={dashboardData} 
+          customers={customers}
+        />
       </div>
 
       <div className="sales-details-information pt-5">

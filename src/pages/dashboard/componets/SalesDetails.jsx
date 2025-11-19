@@ -12,8 +12,9 @@ export default function SalesDetails(
 
     
     const transformedData = salesReport.map(item => ({
-        id: item.date,
-        name: item.sales
+        colum1: item.date,
+        colum2: item.sales,
+        column3 : "Dummy"
     }));
 
 

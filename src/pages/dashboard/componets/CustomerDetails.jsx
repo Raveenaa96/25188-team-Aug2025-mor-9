@@ -1,21 +1,13 @@
 import { Fragment } from "react/jsx-runtime"
 import BasicTableView from "../../../core/generalComponents/BasicTableView"
-export default function CustomerDetails( 
-    {
+export default function CustomerDetails({
         customers,
         dashboardData
-    }
-
-
-  
-
-
-
-){
+    }){
 
     const transformedData = customers.map(item => ({
-        id: item.customerID,
-        name: item.customerName
+        colum1: item.customerID,
+        colum2: item.customerName
     }));
 
 

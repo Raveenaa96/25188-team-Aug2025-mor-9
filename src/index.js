@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client';
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import DashboardMainPage from './pages/dashboard/DashboardMainPage.jsx';
+import ExampleProps from './pages/ExampleProps/ExampleProps.jsx';
+import ParentMainPage from './pages/ExampleCallback/ParentMainPage.jsx';
 
 
 
@@ -12,7 +14,8 @@ root.render(
     <React.StrictMode>
       
      
-      <DashboardMainPage />
+      {/* <ExampleProps /> */}
+      <ParentMainPage />
       
      
 
