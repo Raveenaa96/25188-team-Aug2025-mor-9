@@ -1,23 +1,48 @@
-React Life Cycle
+ React Life Cycle
 =================
+Class compoenent
+     There are 4 Phases
+     
+          - Initial Phase
+               constructor()
 
-  There are 4 Phases
-    
-       - Initial Phase
-            constructor()
+          - Mouniting Phase
+               render()
+               componentDidMount()
 
-       - Mouniting Phase
-           render()
-           componentDidMount()
+          - Updating phase
+               componentDidUpdate()
+               componentDidCatch()
+               
+          - Umounting Phase
+               componentWillUnmount()
 
-       - Updating phase
-            componentDidUpdate()
-            componentDidCatch()
-           
-       - Umounting Phase
-            componentWillUnmount()
+================================================================================================================
+How to achieve lifeCycle in React Function Component?
+-----------------------------------------------------
+   In React hooks via achevie this life cycle method. there are :
+
+          - useLayoutEffect
+          - useEffect 
+
+  - useEffect is a pefrom side effect of functional component
+
+   Basic Syntax:
+   ============
+
+          useEffect(()=>{
+
+          },[])
 
 
-How to achieve lifeCycle in Function Component?
-===================================================
-   React useEffect hooks is achieve this life cycle methods.
+   Explanation Phases :-
+
+          useEffect(()=>{
+               // Initial Phase and Mounting Phase
+
+               return(()=>{
+                    // Unmounting - Phase
+               })
+          },[
+               // Updating - Phase
+          ])
