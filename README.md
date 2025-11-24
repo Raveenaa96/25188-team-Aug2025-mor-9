@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+API => Application Protocal Interface.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+                     post
+        Clinet  -------------------> Server
+                     get
+        Client <------------------- Server
 
-## Available Scripts
+        Client <-------------------> Sever
 
-In the project directory, you can run:
 
-### `npm start`
+Rest Api => Representational State Transfer Application Programming Interface
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    HTTP Protocal
+        - GET  - retrieve data
+        - POST - create new data
+        - PUT  – update data
+        - PATCH  – update data
+        - DELETE – remove data
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Status Codes
 
-### `npm test`
+        200 OK
+        201 Created
+        400 Bad Request
+        404 Not Found
+        500 Internal Server Error
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React API Call
+==============
+    1. fetch method
+    2. axios libirary
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Fetch method
+------------
+    - It is pure javascript function
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Syntax:  fetch(endpointURL,Options)
 
-### `npm run eject`
+            Options = {
+                method : GET/POST/PUT
+                headers: {
+                    accept : "application/json"
+                    contentType:  "application/json"
+                }
+                body : JSON.stringy(data)  // post put patch
+            } 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Axios
+=====
+    -  axios is one of the react  libirary
+    -  it is helps simplify to api calls.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Installation:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    -  npm install axios --save
 
-## Learn More
+Syntax:
+        import axios from 'axios'
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+GET Method:
+    
+    let response =  axios.get(endpointURL)
+                    .then(data => data.json())
+                    .then(responseData =>  console.log(responseData))
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
