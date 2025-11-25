@@ -1,11 +1,19 @@
 API => Application Protocal Interface.
 
-                     post
-        Clinet  -------------------> Server
-                     get
-        Client <------------------- Server
+                    Insert new Record  POST
 
-        Client <-------------------> Sever
+        Clinet  -----------------------------------------> Server
+                     View Record  - GET
+
+        Client <------------------------------------------ Server
+                    Modify existing record - PUT
+
+        Client -------------------------------------------> Sever
+                    particular-field-modify - PATCH
+        Client ------------------------------------------> Sever
+
+                    Remove record - DELETE
+         Client ------------------------------------------> Sever
 
 
 Rest Api => Representational State Transfer Application Programming Interface
@@ -29,23 +37,51 @@ Rest Api => Representational State Transfer Application Programming Interface
 
 React API Call
 ==============
-    1. fetch method
-    2. axios libirary
+    1. fetch method      - Javascript function
+    2. axios             - React libirary
 
 Fetch method
 ------------
     - It is pure javascript function
 
-    Syntax:  fetch(endpointURL,Options)
+    
 
-            Options = {
-                method : GET/POST/PUT
+      Syntax:  
+
+         options = {
+                method :  Method_name 
                 headers: {
                     accept : "application/json"
                     contentType:  "application/json"
                 }
-                body : JSON.stringy(data)  // post put patch
+                body : JSON.stringy( post_data )  // Ignore get method
             } 
+      
+      
+      
+        fetch(endpointURL,options)
+
+GET : 
+
+         fetch(endpointURL)
+       
+
+POST :
+
+            options = {
+                method : POST
+                headers: {
+                    accept : "application/json"
+                    contentType:  "application/json"
+                }
+                body : JSON.stringy(data)  
+            } 
+
+
+             fetch(endpointURL,options)
+
+
+
 
 
 Axios
@@ -63,7 +99,33 @@ Syntax:
 
 GET Method:
     
-    let response =  axios.get(endpointURL)
+                axios.get(endpointURL)
                     .then(data => data.json())
                     .then(responseData =>  console.log(responseData))
 
+
+POST METHOD:    
+
+                let payload = {
+                    email: "Saravanan@gmail.com"
+                    password:"Test@123"
+                }
+
+                let headers = {
+                    token : "xyzoooppp111hhhrrrrrdddd"
+                }
+
+
+          axios.post( endpointURL,payload )
+                    .then(data => data.json())
+                    .then(responseData =>  console.log(responseData))
+                    .catch(error => console.error(error))
+
+
+
+In-Cased-custom-headers Need
+
+                axios.post(endpointURL,payload, headers:headers )
+                    .then(data => data.json())
+                    .then(responseData =>  console.log(responseData))
+                    .catch(error => console.error(error))

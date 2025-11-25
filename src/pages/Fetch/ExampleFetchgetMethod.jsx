@@ -6,21 +6,14 @@ export default function ExampleFetchgetMethod(){
     const [records,setRecords] = useState(null)
 
     useEffect(()=>{
-        getProducts()
+        //getProductsasyncAwait()
+        getProductsFromPromise()
     },[])
 
-    const getProducts = async () => {
+    const getProductsasyncAwait = async () => {
 
         let endPointURL = "https://fakestoreapi.com/products"
-        let option = {
-
-            method:"GET",
-            headers:{
-                accept:"application/json",
-                contentType:"application/json"
-            }
-        }
-        let response =  await fetch(endPointURL,option)
+        let response =  await fetch(endPointURL)
         let responeData = await response.json()
         
         if(response && responeData ){
@@ -28,6 +21,17 @@ export default function ExampleFetchgetMethod(){
         }
         
         
+    }
+
+    const getProductsFromPromise = () => {
+
+        let endPointURL = "https://fakestoreapi.com/products"
+
+        fetch(endPointURL)
+        .then((response) =>  response.json())
+        .then((responseData) => setRecords(responseData))
+        .catch((error) => console.error(error))
+       
     }
 
 

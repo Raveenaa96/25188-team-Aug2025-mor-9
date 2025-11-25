@@ -5,16 +5,26 @@ export default function ExampleAxiosget() {
   const [records, setRecords] = useState(null);
 
   useEffect(() => {
-    getProducts();
+    //getProductsasyncAwait();
+    getProductsFromPromise();
   }, []);
 
-  const getProducts = async () => {
+  const getProductsasyncAwait = async () => {
     let endPointURL = "https://fakestoreapi.com/products";
+
     const response = await axios.get(endPointURL);
 
     if (response && response.data) {
       setRecords(response.data);
     }
+  };
+
+  const getProductsFromPromise = () => {
+    let endPointURL = "https://fakestoreapi.com/products";
+    axios
+      .get(endPointURL)
+      .then((response) => setRecords(response?.data))
+      .catch((error) => console.error(error));
   };
 
   return (
