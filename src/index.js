@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import ExampleFetchgetMethod from './pages/Fetch/ExampleFetchgetMethod';
-import ExampleAxiosget from './pages/axios/ExampleAxiosget';
-
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import ExampleFetchPostMethod from './pages/Fetch/ExampleFetchPostMethod';
-import ExampleAxiosPost from './pages/axios/ExampleAxiosPost';
+import ExampleForm from './pages/react-basic-form/ExampleForm';
+import ExampleApicall from './pages/react-basic-form/ExampleFormApicall';
 
 
 
@@ -17,12 +14,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
       
-      <ExampleFetchgetMethod />
-      {/* <ExampleAxiosget /> */}
-
-
-      {/* <ExampleFetchPostMethod /> */}
-      {/* <ExampleAxiosPost /> */}
+      {/* <ExampleForm /> */}
+      <ExampleApicall/>
+    
      
 
     </React.StrictMode>
