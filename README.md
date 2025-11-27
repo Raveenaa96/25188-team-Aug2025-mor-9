@@ -10,5 +10,14 @@ React Forms
 
 Formik
 =======
-        - Formik Creation
+        - Formik is a React form libirary.
+        - Easy form state management
+        - Built-in validation (Yup integration is common)
+        - Convenient form submission handling
+        - Minimal boilerplate compared to managing everything manually with useState
+
+
+Yup Validation
+===============
+      Yup is a validation Libirary.
         
