@@ -4,6 +4,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import ExampleForm from './pages/react-basic-form/ExampleForm';
 import ExampleApicall from './pages/react-basic-form/ExampleFormApicall';
 import CustomFieldForm from './pages/react-customFieldForm/CustomFieldForm';
+import ExampleFormik from './pages/react-formik/ExampleFormik';
+import ExampleFormikValidation from './pages/react-formik/ExampleFromikValidation';
 
 
 
@@ -17,7 +19,9 @@ root.render(
       
       {/* <ExampleForm /> */}
       {/* <ExampleApicall/> */}
-      <CustomFieldForm />
+      {/* <CustomFieldForm /> */}
+      {/* <ExampleFormik /> */}
+      <ExampleFormikValidation />
     
      
 
