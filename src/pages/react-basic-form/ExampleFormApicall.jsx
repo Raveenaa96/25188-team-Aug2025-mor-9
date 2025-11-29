@@ -10,7 +10,12 @@ export default function ExampleApicall(){
         const fieldName =  event.target.name
         const fieldValue = event.target.value
 
-        setLoginFormData({...loginFormData, [fieldName] : fieldValue})  
+        setLoginFormData(
+            {
+                ...loginFormData,
+                 [fieldName] : fieldValue
+            }
+        )  
 
         
 
@@ -28,11 +33,13 @@ export default function ExampleApicall(){
                 "password": loginFormData?.password
             }
 
-            console.log("endpointUrl====>",endpointUrl)
+            // console.log("endpointUrl====>",endpointUrl)
+            // console.log("payload=====>",payload )
 
-             console.log("payload=====>",payload )
-
-            let respone = await axios.post(endpointUrl,payload)
+            let response = await axios.post(endpointUrl,payload)
+            //console.log("Response ::::",response.data)
+            if(response && response.data && response.data.token)
+                localStorage.setItem("auth-token", response.data.token)
 
            
         }

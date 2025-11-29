@@ -19,6 +19,8 @@ export default function CustomFieldForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    console.log("productformData=====>",productformData)
+
     if (
       productformData &&
       productformData.length != 0 &&
@@ -46,10 +48,15 @@ export default function CustomFieldForm() {
       </div>
       <div className="form">
         <form method="post" onSubmit={handleSubmit}>
+
+
           <div className="form-group">
+
             {fieldMapping &&
               fieldMapping.length != 0 &&
               fieldMapping.map((value, index) => {
+
+
                 return (
                   <Fragment>
                     {value.fieldDisabled != true &&
@@ -57,26 +64,37 @@ export default function CustomFieldForm() {
                     
                     
                     {value.fieldType == "textarea" && value.fieldDisabled != true ? (
+
+
                       <textarea
                         name={value.fieldName}
                         className={value.fieldClassName}
                         row={value.fieldRowSize}
                         col={value.fieldColumnSize}
+                         onChange={handleChange}
                       ></textarea>
+
+
                     ) : value.fieldType == "select" && value.fieldDisabled != true ? (
-                      <select className={value.fieldClassName}>
+
+
+                      <select className={value.fieldClassName}  onChange={handleChange} name={value.fieldName}>
                         {value.options.map((value) => (
                           <option value={value}> {value}</option>
                         ))}
                       </select>
+
+
                     ) : (
                      value.fieldDisabled != true &&
+
                       <input
-                        type={value.fieldType}
+                        type={value.fieldType}  // text, file, email, password, number, 
                         name={value.fieldName}
                         className={value.fieldClassName}
                         onChange={handleChange}
                       />
+
                     )}
                   </Fragment>
                 );

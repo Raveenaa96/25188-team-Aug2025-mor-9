@@ -33,6 +33,16 @@
         "fieldColumnSize" : 5,
         "fieldDisabled" : false
     },
+    {   
+        "fieldLabel" : "Product Comments",
+        "fieldType":"textarea",
+        "fieldID":"product-comments",
+        "fieldClassName":"form-control",
+        "fieldName":"product-comments",
+        "fieldRowSize" : 5,
+        "fieldColumnSize" : 5,
+        "fieldDisabled" : true
+    },
     {
         "fieldLabel" : "Product category",
         "fieldType":"select",

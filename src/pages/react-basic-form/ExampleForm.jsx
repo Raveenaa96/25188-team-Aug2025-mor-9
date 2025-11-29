@@ -6,10 +6,21 @@ export default function ExampleForm(){
 
     const handleChange = (event) => {
 
+        /*  console.log("event===>",event) */
+
         const fieldName =  event.target.name
         const fieldValue = event.target.value
+        /*
+            console.log("Field Name===>",fieldName)     // Example : username    |  password
+            console.log("Field Value====>",fieldValue)  // Example : Saravanan   |  Test@123
+        */
 
-        setLoginFormData({...loginFormData, [fieldName] : fieldValue})  
+        setLoginFormData( 
+                    {
+                        ...loginFormData, 
+                        [fieldName] : fieldValue 
+                    } 
+                )  
 
         /**
          *  {
@@ -45,6 +56,8 @@ export default function ExampleForm(){
                             
                         />
                     </div>
+
+                    
                      <div className="form-group">
                         <label>Password </label>
                         <input 
